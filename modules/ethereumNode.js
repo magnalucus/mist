@@ -16,7 +16,7 @@ const ethereumNodeLog = logger.create('EthereumNode');
 
 const DEFAULT_NODE_TYPE = 'gesn';
 const DEFAULT_NETWORK = 'main';
-const DEFAULT_SYNCMODE = 'fast';
+const DEFAULT_SYNCMODE = 'full';
 
 const UNABLE_TO_BIND_PORT_ERROR = 'unableToBindPort';
 const NODE_START_WAIT_MS = 3000;
@@ -99,7 +99,7 @@ class EthereumNode extends EventEmitter {
   }
 
   get isLightMode() {
-    return this._syncMode === 'fast';
+    return this._syncMode === 'full';
   }
 
   get state() {
@@ -323,7 +323,7 @@ class EthereumNode extends EventEmitter {
         this.lastError = err.tag;
         this.state = STATES.ERROR;
 
-        // if unable to start eth node then write gesn to defaults
+        // if unable to start eth node then write geth to defaults
         if (nodeType === 'eth') {
           Settings.saveUserData('node', 'gesn');
         }
@@ -447,6 +447,8 @@ class EthereumNode extends EventEmitter {
               ? [
                   '--syncmode',
                   syncMode,
+                  '--gcmode',
+                  'archive',
                   '--cache',
                   process.arch === 'x64' ? '1024' : '512'
                 ]
@@ -494,7 +496,7 @@ class EthereumNode extends EventEmitter {
         /*
                     We wait a short while before marking startup as successful
                     because we may want to parse the initial node output for
-                    errors, etc (see gesn port-binding error above)
+                    errors, etc (see geth port-binding error above)
                 */
         setTimeout(() => {
           if (STATES.STARTING === this.state) {
@@ -544,7 +546,7 @@ class EthereumNode extends EventEmitter {
       this.emit('nodeLog', cleanData);
     }
 
-    // check for gesn startup errors
+    // check for geth startup errors
     if (STATES.STARTING === this.state) {
       const dataStr = data.toString().toLowerCase();
       if (nodeType === 'gesn') {

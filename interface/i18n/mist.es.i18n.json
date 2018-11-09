@@ -32,7 +32,8 @@
                 "newAccount": "Nueva cuenta",
                 "backup": "Copia de seguridad",
                 "backupKeyStore": "Cuentas",
-                "backupMist": "Datos de la aplicación"
+                "backupMist": "Datos de la aplicación",
+                "swarmUpload": "Subir a Swarm"
             },
             "develop": {
                 "uploadToSwarm": "Upload a Swarm",
@@ -187,7 +188,7 @@
                 "errors": {
                     "connectionTimeout": "No se pudo conectar al nodo, ha dejado de funcionar en segundo plano?",
                     "wrongPassword": "Contraseña incorrecta",
-                    "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
+                    "multipleKeysMatchAddress": "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
                     "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },

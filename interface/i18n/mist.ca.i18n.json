@@ -81,8 +81,8 @@
             },
             "help": {
                 "label": "Ajuda",
-                "mistWiki": "Solució de problemes i Ajuda",
-                "gitter": "Canal de Mist a Gitter",
+                "discord": "Discord",
+                "reddit": "Reddit",
                 "reportBug": "Reportar un problema a Github"
             }
         },
@@ -190,7 +190,7 @@
                 "enterPassword": "Introdueix una contrasenya",
                 "repeatPassword": "Repeteix la contrasenya",
                 "creating": "Generant el compte...",
-                "backupHint": "Assegura't que fas una còpia de seguretat dels teus fitxer de claus I contrasenya!\n\nPots trobar el teu fitxer de claus mitjançant el menú principal -> Comptes -> Copia de seguretat -> Comptes. Desa una copia de la carpeta del \"fitxer de claus\" on no puguis perdre-la!",
+                "backupHint": "Assegura't que fas una còpia de seguretat dels teus fitxer de claus I contrasenya!\n\nPots trobar el teu fitxer de claus mitjançant el menú principal -> Fitxer -> Copia de seguretat -> Comptes. Desa una copia de la carpeta del \"fitxer de claus\" on no puguis perdre-la!",
                 "errors": {
                     "passwordMismatch": "Les teves contrasenyes no coincideixen.",
                     "passwordTooShort": "Utilitza una contrasenya més llarga"
@@ -232,7 +232,7 @@
                 "errors": {
                     "connectionTimeout": "No s'ha pogut connectar al node, ha fallat la tasca al fons?",
                     "wrongPassword": "Contrasenya errònia",
-                    "multipleKeysMatchAddress": "Multiples claus coincideixen amb l'adreça. Si us plau eliminar els duplicats del fitxer de claus (menú -> comptes -> copia de seguretat -> comptes)",
+                    "multipleKeysMatchAddress": "Multiples claus coincideixen amb l'adreça. Si us plau eliminar els duplicats del fitxer de claus (menú -> Fitxer -> Copia de seguretat -> Comptes)",
                     "insufficientFundsForGas": "Saldo insuficient al compte principal (etherbase) per pagar el gas",
                     "sameAccount": "No es pot enviar a un mateix"
                 },
